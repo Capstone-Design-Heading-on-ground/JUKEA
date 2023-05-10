@@ -11,27 +11,28 @@
  <link rel="stylesheet" href="${contextPath}/resources/css/main.css">
 </head>
 <body>
-
-<div class="mainheader">
-    <h1>JUKEA</h1>
+  <div class="mainheader">
+    
       <div class="head-title">
+        <h1>JUKEA</h1>
         <h4>밤은 길고 술은 달다 ★</h4>
       </div>
+      <div>
       <form method="post">
         <input type="text" name="serach" placeholder="필요하신 상품을 검색하세요"/>
-        <a href="${contextPath}/login"><input type="button" name="login" value="로그인"></a>
-        <a href="${contextPath}/signin"><input type="button" name="signin" value="회원가입"></a>
+        <a href="login.html"><input type="button" name="login" value="로그인"></a>
+        <a href="signin.html"><input type="button" name="signin" value="회원가입"></a>
       </form>
+      </div>
       <div class="head-manu">
           <ul>
-            <li><a href="${contextPath}/sulbti">술bti</a></li>
-            <li><a href="${contextPath}/sulinformation">술information</a></li>
-            <li><a href="${contextPath}/sulpricedif">술 가격비교</a></li>
+            <li><a href="sulbti.html">술bti</a></li>
+            <li><a href="sulinformation.html">술information</a></li>
+            <li><a href="sulpricedif.html">술 가격비교</a></li>
           </ul>
       </div>
   </div>
   <div class="mainbody">
   </div>
-
 </body>
 </html>
