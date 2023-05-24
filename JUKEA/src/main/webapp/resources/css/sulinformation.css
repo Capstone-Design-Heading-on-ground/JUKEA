@@ -17,3 +17,146 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
   color: white;
 }
+
+#main {
+  border: 4px dashed #bcbcbc;
+  margin: 0% auto;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+p {
+  font-size: 25px;
+}
+
+#qna {
+  display: none;
+}
+
+/*질문 하는 박스*/
+.qBox {
+  border: 4px dashed #bcbcbc;
+  margin: 0% auto;
+  margin-top: 3%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 25px;
+  width: 80%;
+}
+
+.answerList {
+  border-radius: 25px;
+  margin: 0% auto;
+  margin-top: 1%;
+  display: block;
+  width: 80%;
+  border: 0px;
+  font-size: 25px;
+}
+
+/* 커서가 요소 위에 올라가 있거나 선택했을때 */
+.answerList:hover, .answerList:focus {
+  border: 4px dashed #bcbcbc;
+}
+/* 진행도 바*/
+.status {
+  margin: 0% auto;
+  height: 20px;
+  width: 80%;
+  border: 4px dashed #bcbcbc;
+  border-radius: 20px;
+}
+
+.statusBar {
+  height: 100%;
+  border-radius: 20px;
+  background: #ffacfc; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffacfc 0%, #f148fb 25%, #7122fa 25%, #560a86 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffacfc 0%, #f148fb 25%, #7122fa 50%, #560a86 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffacfc 0%, #f148fb 25%, #7122fa 50%, #560a86 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffacfc', endColorstr='#560a86',GradientType=0 ); /* IE6-9 */
+}
+
+#result{
+  display: none;
+  border: 4px dashed #bcbcbc;
+  margin: 0% auto;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#shareResult {
+  border: 4px dashed #bcbcbc;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.resultName {
+  font-size: 25px;
+}
+
+.resultDesc {
+  font-size: 20px;
+}
+
+.gohome {
+  color: white;
+  background-color: pink;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.gohome:hover, .gohome:focus {
+  background-color: palevioletred;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* Chorme */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn{
+  animation: fadeIn;
+  animation-duration: 0.5s;
+}
