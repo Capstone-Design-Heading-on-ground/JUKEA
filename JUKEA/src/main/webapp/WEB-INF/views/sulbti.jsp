@@ -18,7 +18,7 @@
   <!-- 처음 페이지 -->
   <section id="main" >
     <h2>질문을 통해 자신과 맞는 술을 찾는</h2>
-    <p> MBTI 사이트 입니다!<br>
+    <p> 추천 사이트 입니다!<br>
       아래에 있는 시작하기 버튼을 눌러 시작해주세요.</p>
     <button type="button" class="btn btn-light mt-3" onclick="js:begin()">시작하기</button>
   </section>
@@ -37,7 +37,7 @@
 <!-- 결과 페이지 -->
 <form action = "/findsul" method = "post">
   <section id="result">
-    <h2>당신의 술bti는?</h2>
+    <h2>당신과 잘 어울리는 술은?</h2>
     <div class="resultName"></div>  
     <div class="resultDesc"></div>
     <button type="submit" >추천 술</button>

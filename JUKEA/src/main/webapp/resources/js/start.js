@@ -1,11 +1,8 @@
-/**
- * 
- */
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
-const endPoint = 12;
-const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const endPoint = 5;
+const select = [0, 0, 0, 0, 0];
 
 //메인페이지에서 질문페이지로 넘어가기
 function begin() {
@@ -66,8 +63,9 @@ function addAnswer(answerText, qIdx, idx) {
     }
     setTimeout(() => {
       var target = qnaList[qIdx].a[idx].type;
+      var value = qnaList[qIdx].a[idx].value;
       for (let i = 0; i < target.length; i++) {
-        select[target[i]] += 1;
+        select[target[i]] = value;
       }
 
       for (let i = 0; i < children.length; i++) {
@@ -90,27 +88,29 @@ function goResult() {
       result.style.display = "block";
     }, 450)
   })
-  setResult();
+  calResult();
 }
 
 function setResult() {
   let point = calResult();
-  //결과를 대입하고 데이터js에 인포리스트 배열의 값을 가지고 오게 하는것
-  const resultName = document.querySelector('.resultName');
-  resultName.innerHTML = infoList[point].name;
-  const resultDesc = document.querySelector('.resultDesc');
-  resultDesc.innerHTML = infoList[point].desc;
-  // var resultImg = document.createElement('img');
-  // const imgDiv = document.querySelector('#resultImg');
-  // var imgURL = 'img/image-' + point + '.png';
-  // resultImg.src = imgURL;
-  // resultImg.alt = point;
-  // resultImg.classList.add('img-fluid');
-  // imgDiv.appendChild(resultImg);
   return point;
 }
 
 function calResult() {
-  var result = select.indexOf(Math.max(...select)); // 배열의 최대값을 가져온다
-  return result;
+  var info = ["type", "smell", "flavor", "price", "alchol"];  
+  var form = document.createElement("form");
+      form.setAttribute("charset", "UTF-8");
+      form.setAttribute("method", "post");
+      form.setAttribute("action","/jukea/survayResult");
+  for(var i=0; i< select.length; i++) {
+    console.log(`배열 인덱스: ${info[i]}/ 값: ${select[i]}`);
+      var hiddenField = document.createElement("input");
+      hiddenField.setAttribute("type", "hidden");
+      hiddenField.setAttribute("name", info[i]);
+      hiddenField.setAttribute("value", select[i]);
+      form.appendChild(hiddenField);
+  }
+
+  document.body.appendChild(form);
+  //form.submit();
 }
