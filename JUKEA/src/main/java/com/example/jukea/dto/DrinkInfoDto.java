@@ -7,6 +7,7 @@ public class DrinkInfoDto {
 	private int did;			//고유 PK 자동증가	ex) 5
 	private String dname;	//술 이름			ex) 매화
 	private int dprice;		//술 가격			ex)	4500
+	private int amount;		//술 양			ex) 360
 	private float dalchol;	//술 도수			ex) 7.5
 	private String dtype;	//술 종류			ex) 소주
 	private int dflavor; 	//쓴 정도 (0~9)	ex) 4
