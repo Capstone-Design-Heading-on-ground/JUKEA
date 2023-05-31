@@ -25,8 +25,8 @@ public class JukeaService implements IJukeaService {
 	}
 
 	@Override
-	public List<DrinkInfoDto> drink_searchBySulbti() {
-		return dao.searchBySulbti();
+	public List<DrinkInfoDto> drink_searchBySulbti(int[] arr) {
+		return dao.searchBySulbti(arr);
 	}
 
 	@Override

@@ -49,7 +49,7 @@ public class MyController {
 		for(int i=0; i<arr.length; i++) {
 			arr[i] = Integer.parseInt(request.getParameter(info[i]));
 		}
-		model.addAttribute(bbs.drink_searchBySulbti());
+		model.addAttribute(bbs.drink_searchBySulbti(arr));
 		return " ";
 	}
 	
