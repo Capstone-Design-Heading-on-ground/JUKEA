@@ -9,11 +9,11 @@
       margin: 0;
     padding: 0;}
 
-html { width: 100%; height:100%; overflow:hidden; }
+html { width: 100%; height:130%;}
 
 body { 
   width: 100%;
-  height:100%;
+  height:90%;
   font-family: 'Open Sans', sans-serif;
   background: #092756;
   background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
@@ -26,11 +26,10 @@ body {
 }
 
 .mainheader { 
-  position: absolute;
   text-align: center;
   margin:0 auto;
   width:100%;
-  height:300px;
+  height:100px;
 }
 
 .mainheader h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align: center; }
@@ -44,17 +43,133 @@ body {
   color: #fff; text-align: center;
 }
 
-.sul{
-  width: 80%;
-  height: 100%;
-  margin: auto;
+.search{
   text-align: center;
 }
 
-.sul ul{
+.banner{
+  list-style: none;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+}
+
+.banner li{
+  display: inline-block;
+  padding: 10px;
+}
+
+.sul{
+  margin:10px;
+  height: 50px;
+  text-align: center;
+}
+
+.banner input {
+  display: none;
+}
+
+input[type=radio]:checked + label {
+  color:red;
+}
+
+.main{
+  height: auto;
+}
+
+.sullist .page{
+  text-align: center;
+  width: 100%;
+  height: 20%;
+}
+
+.sullist .pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sullist .pagination li {
+  display: inline;
+  text-align: center;
+  margin: auto;
+}
+
+.sullist .pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: #96a0ad;
+  line-height: 1.5;
+}
+
+.sullist .first{
+  margin-right: 15px;
+}
+
+.sullist .last{
+  margin-left: 15px;
+}
+
+.first:hover, .last:hover, .left:hover, .right:hover{
+  color: #2e9cdf;
+}
+
+.sullist .pagination a.active {
+  cursor: default;
+  color: #ffffff;
+}
+
+.sullist .pagination a:active {
+  outline: none;
+}
+
+.sullist .modal .num{
+  margin-left: 3px;
+  padding: 0;
+  width: 30px;
+  height:30px;
+  line-height: 30px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.sullist .modal .num:hover {
+  background-color: #2e9cdf;
+  color: #ffffff;
+}
+
+.sullist .modal .num.active, .modal .num:active {
+  background-color: #2e9cdf;
+  cursor: pointer;
+}
+
+.sullist .arrow:left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid blue;
+}
+
+.sullist{
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  text-align: center;
+  position: relative;top: 70px;
+}
+
+.sullist ul{
   list-style-type: none;
 }
-.sul li{
+.sullist li{
   float: left;
   margin-left: 107px;
   margin-top: 50px;
