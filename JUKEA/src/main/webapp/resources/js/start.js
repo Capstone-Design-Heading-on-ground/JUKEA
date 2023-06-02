@@ -92,8 +92,7 @@ function goResult() {
 }
 
 function setResult() {
-  let point = calResult();
-  return point;
+  calResult();
 }
 
 function calResult() {
@@ -101,7 +100,7 @@ function calResult() {
   var form = document.createElement("form");
       form.setAttribute("charset", "UTF-8");
       form.setAttribute("method", "post");
-      form.setAttribute("action","/jukea/survayResult");
+      form.setAttribute("action","/survayResult");
   for(var i=0; i< select.length; i++) {
     console.log(`배열 인덱스: ${info[i]}/ 값: ${select[i]}`);
       var hiddenField = document.createElement("input");
@@ -112,5 +111,5 @@ function calResult() {
   }
 
   document.body.appendChild(form);
-  //form.submit();
+  form.submit();
 }

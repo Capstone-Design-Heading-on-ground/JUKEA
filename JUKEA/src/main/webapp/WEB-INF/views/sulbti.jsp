@@ -12,7 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../css/sulinformation.css">
+  <link rel="stylesheet" href="${contenxtPath}/resources/css/sulinformation.css">
 </head>
 <body>
   <!-- 처음 페이지 -->
