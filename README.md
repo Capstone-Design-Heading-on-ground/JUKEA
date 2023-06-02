@@ -7,7 +7,7 @@ create database drinkdb;  DB 생성
 use drinkdb; DB 사용
 #### 1.drinktable create 문
 ```
-CREATE TABLE `drinkdb`.`t_drink` (
+CREATE TABLE `jukea`.`t_drink` (
   `did` INT NOT NULL AUTO_INCREMENT,
   `dname` VARCHAR(45) NOT NULL,
   `dprice` INT NOT NULL,
