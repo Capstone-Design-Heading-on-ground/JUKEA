@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.jukea.dao.IMemberDao">
+	<insert id="insert_Member" parameterType="java.util.HashMap">
+		insert into member(id, pw, name, nickname, phone, address, mail, birthday)values(#{member1}, #{member2}, #{member3}, #{member4}, #{member5}, #{member6}, #{member7}, #{member8})
+	</insert>
+</mapper>

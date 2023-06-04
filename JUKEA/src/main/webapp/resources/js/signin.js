@@ -1,5 +1,4 @@
 function test() {
-   var frmlogin = document.frmlogin;
     var id = document.getElementById('pid').value;
     var name = document.getElementById('pname').value;
     var password = document.getElementById('pwd').value;
@@ -15,6 +14,7 @@ function test() {
     var year = date.getFullYear();
     var b_year = Number(birthday.substr(0,4));
     var result = year - b_year;
+
     
     if(id == "")
     {
@@ -58,5 +58,6 @@ function test() {
        if( password != checkpassword ) {
           alert("비밀번호불일치");
           return false;
-        } 
+        }
+       
   }

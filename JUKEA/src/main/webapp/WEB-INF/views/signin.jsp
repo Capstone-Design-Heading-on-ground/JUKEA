@@ -34,7 +34,7 @@
   <br>
 <div class="login-page">
     <div class="form">
-      <form class="login-form" name = "frmlogin">
+      <form action = insert_member method = post class="login-form">
         <label>아이디</label>
         <input type="text" id="pid" name = "mid" placeholder="아이디"/>
         <label>비밀번호</label>
@@ -54,7 +54,7 @@
         <p><small>회원정보 수정 시 사용하니 정확한 정보를 <br>입력하세요.</small></p>
         <input type="date" id="mbirthday" name = "mbirthday"/>
         <label>전화번호</label>
-        <div class="phone">
+        <div class="phone" id = "phone" name = "phone">
           <select id="hp1" name="hp1" required>
             <option value="010">010</option>
             <option value="011">011</option>
@@ -66,7 +66,7 @@
           <input type="tel" id="hp2" name="hp2" maxlength="4">
           <input type="tel" id="hp3" name="hp3" maxlength="4">
         </div>
-        <input type="button" onClick="test()" value="회원가입" />
+        <input type="submit" onClick="test()" value="회원가입" />
       </form>
     </div>
   </div>
