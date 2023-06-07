@@ -8,4 +8,10 @@
 	<select id="getAllDrinks" resultType="com.example.jukea.dto.DrinkInfoDto">
 		SELECT * FROM T_Drink
 	</select>
+	<select id="searchByCategory" resultType="com.example.jukea.dto.DrinkInfoDto">
+		SELECT * FROM T_Drink WHERE DTYPE = #{param1}
+	</select>
+	<select id="getDrinkInfo" resultType="com.example.jukea.dto.DrinkInfoDto">
+		SELECT * FROM T_Drink WHERE DID = #{param1}
+	</select>
 </mapper>
