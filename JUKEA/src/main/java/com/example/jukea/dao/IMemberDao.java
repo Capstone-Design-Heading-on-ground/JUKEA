@@ -5,9 +5,8 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.jukea.dto.MemberDto;
-
 @Mapper
 public interface IMemberDao {
 	public int insert_Member(Map<String, String> map);
+	public int login_Member(Map<String, String> map);
 }

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.example.jukea.dto.DrinkInfoDto;
-import com.example.jukea.dto.MemberDto;
 
 public interface IJukeaService {
 	public List<DrinkInfoDto> drink_getAllDrinks();
@@ -14,4 +13,5 @@ public interface IJukeaService {
 	public DrinkInfoDto drink_getDrinkInfo(int did);
 	
 	public int insert_Member(Map<String, String> map);
+	public int login_Member(Map<String, String> map);
 }
