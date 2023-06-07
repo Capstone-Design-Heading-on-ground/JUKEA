@@ -37,26 +37,17 @@ public class MyController {
 	@RequestMapping("/insert_member")
 	public String insert_member(Model model, HttpServletRequest request) {
 		String id = request.getParameter("mid");
-		
 		String pw = request.getParameter("mpw");
-
 		String name = request.getParameter("mname");
-
 		String nickname = request.getParameter("mnickname");
-
 		String h1 = request.getParameter("hp1");
 		String h2 = request.getParameter("hp2");
 		String h3 = request.getParameter("hp3");
 		String phone = h1+"-"+h2+"-"+h3;
-
 		String address = request.getParameter("maddress");
-
 		String mail = request.getParameter("mmail");
-
 		String birthday = request.getParameter("mbirthday");
-
 		Map<String, String> map = new HashMap<String, String>();
-		
 		map.put("member1", id);
 		map.put("member2", pw);
 		map.put("member3", name);
@@ -77,7 +68,13 @@ public class MyController {
 	}
 	
 	@RequestMapping("/sulinformation")
-	public String sulinformation() {
+	public String sulinformation(HttpServletRequest request, Model model) {
+		String selectedCategory = request.getParameter("selectedCategory");
+		if("".equals(selectedCategory)||selectedCategory==null) {
+			selectedCategory = "위스키";
+		}
+		model.addAttribute("drinks",bbs.drink_searchByCategory(selectedCategory));
+		model.addAttribute("selectedCategory",selectedCategory);
 		return "sulinformation";
 	}
 	
@@ -95,6 +92,13 @@ public class MyController {
 		}
 		model.addAttribute(bbs.drink_searchBySulbti(arr));
 		return " ";
+	}
+	
+	@RequestMapping("/info")
+	public String info(HttpServletRequest request, Model model) {
+		int did = Integer.parseInt(request.getParameter("id"));
+		model.addAttribute("drink",bbs.drink_getDrinkInfo(did));
+		return "drinkInfo";
 	}
 	
 }
