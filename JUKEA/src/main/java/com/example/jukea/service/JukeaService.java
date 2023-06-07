@@ -26,8 +26,8 @@ public class JukeaService implements IJukeaService {
 	}
 
 	@Override
-	public List<DrinkInfoDto> drink_searchByCategory() {
-		return dao.searchByCategory();
+	public List<DrinkInfoDto> drink_searchByCategory(String selectedCategory) {
+		return dao.searchByCategory(selectedCategory);
 	}
 
 	@Override
@@ -36,13 +36,18 @@ public class JukeaService implements IJukeaService {
 	}
 
 	@Override
-	public List<DrinkInfoDto> drink_serachByName() {
-		return dao.serachByName();
+	public List<DrinkInfoDto> drink_searchByName() {
+		return dao.searchByName();
 	}
 
 	@Override
 	public int insert_Member(Map<String, String> map) {
 		return mdao.insert_Member(map);
+	}
+
+	@Override
+	public DrinkInfoDto drink_getDrinkInfo(int did) {
+		return dao.getDrinkInfo(did);
 	}
 
 
