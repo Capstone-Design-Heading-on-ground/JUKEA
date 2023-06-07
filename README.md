@@ -2,9 +2,9 @@
 
 ### DB 쿼리문
 
-create database drinkdb;  DB 생성
+create database jukea;  DB 생성
 
-use drinkdb; DB 사용
+use jukea; DB 사용
 #### 1.drinktable create 문
 ```
 CREATE TABLE `jukea`.`t_drink` (
@@ -29,5 +29,5 @@ insert into t_drink(dname,dprice,damount,dalchol,dtype,dflavor,dsmell,dinfo,dima
 insert into t_drink(dname,dprice,damount,dalchol,dtype,dflavor,dsmell,dinfo,dimage) values('샤도네이', 38000 , 750 , 13.5 , '와인' , 3 , '달콤한 포도향' , '와인중 왕 입니다.', 'chardonnay.jpg' '프랑스') ;
 ```
 
-select * from T_Drink; 으로 데이터 검색
+select * from t_drink; 으로 데이터 검색
 
