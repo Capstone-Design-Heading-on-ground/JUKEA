@@ -1,3 +1,4 @@
+<!-- <c:set var="contextPath" value="${pageContext.request.contextPath}"  />  -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="${contextPath}/resources/css/sulinformation.css">
+  <link rel="stylesheet" href="../../resources/css/sulbitiresult.css">
 </head>
 <body>
     <div class="mainheader">
@@ -22,83 +23,40 @@
         <ul class="banner">
           <form>
             <li>
-            	<c:choose>
-            		<c:when test="${selectedCategory eq '위스키'}">
-            			<input type="radio" id="whi" value="위스키" name="alc" checked="checked">
-                	</c:when>
-                	<c:otherwise>
-                		<input type="radio" id="whi" value="위스키" name="alc">
-                	</c:otherwise>       
-                </c:choose>
+            <input type="radio" id="whi" value="위스키" name="alc" checked="checked">
                 <label for="whi">위스키</label>
             </li>
             <li>
-            	<c:choose>
-            		<c:when test="${selectedCategory eq '와인'}">
-            			<input type="radio" id="win" value="와인" name="alc" checked="checked">
-                	</c:when>
-                	<c:otherwise>
-                		<input type="radio" id="win" value="와인" name="alc">
-                	</c:otherwise>       
-                </c:choose>
-                <label for="win">와인</label>
+              <input type="radio" id="win" name="alc" value="와인">
+                  <label for="win">와인</label>
             </li>
             <li>
-                <c:choose>
-            		<c:when test="${selectedCategory eq '사케'}">
-            			<input type="radio" id="sak" value="사케" name="alc" checked="checked">
-                	</c:when>
-                	<c:otherwise>
-                		<input type="radio" id="sak" value="사케" name="alc">
-                	</c:otherwise>       
-                </c:choose>
-            	<label for="sak">사케</label>
+              <input type="radio" id="sak" name="alc" value="사케">
+                  <label for="sak">사케</label>
             </li>
             <li>
-            	<c:choose>
-            		<c:when test="${selectedCategory eq '맥주'}">
-            			<input type="radio" id="bee" value="맥주" name="alc" checked="checked">
-                	</c:when>
-                	<c:otherwise>
-                		<input type="radio" id="bee" value="맥주" name="alc">
-                	</c:otherwise>       
-                </c:choose>
-                <label for="bee">맥주</label>
+              <input type="radio" id="bee" name="alc" value="맥주">
+                  <label for="bee">맥주</label>
             </li>
             <li>
-              <c:choose>
-            		<c:when test="${selectedCategory eq '브랜디'}">
-            			<input type="radio" id="bra" value="브랜디" name="alc" checked="checked">
-                	</c:when>
-                	<c:otherwise>
-                		<input type="radio" id="bra" value="브랜디" name="alc">
-                	</c:otherwise>       
-                </c:choose>
-              <label for="bra">브랜디</label>
+              <input type="radio" id="bra" name="alc" value="브랜디">
+                  <label for="bra">브랜디</label>
            </li>
             <li>
-              <c:choose>
-            		<c:when test="${selectedCategory eq '리큐르'}">
-            			<input type="radio" id="win" value="리큐르" name="alc" checked="checked">
-                	</c:when>
-                	<c:otherwise>
-                		<input type="radio" id="win" value="리큐르" name="alc">
-                	</c:otherwise>       
-                </c:choose>
-                <label for="req">리큐르</label>
+              <input type="radio" id="req" name="alc" value="리큐르">
+                  <label for="req">리큐르</label>
             </li>
             <li>
-            	<c:choose>
-              		<c:when test="${selectedCategory eq '소주'}">
-            			<input type="radio" id="soj" value="소주" name="alc" checked="checked">
-                	</c:when>
-                	<c:otherwise>
-                		<input type="radio" id="soj" value="소주" name="alc">
-                	</c:otherwise>
-                </c:choose>
-                <label for="soj">소주</label>
-              
+              <input type="radio" id="soj" name="alc" value="소주">
+                  <label for="soj">소주</label>
            </li>
           </form>
         </ul>
+    </div>
+    <div class="imgplace">
+      <img width="400" height="400" src = "../../resources/image/bal.png">
+    </div>
+    <div class="infoplace">
+      <p>캡스톤디자인 맨깡의 헤딩 술정보 사이트 "주케아"</p>
+      <p>술BTI결과로 나온 술은 <span class="sulname">술이름</span>입니다.</p>
     </div>
