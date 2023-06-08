@@ -75,124 +75,27 @@ input[type=radio]:checked + label {
   color:red;
 }
 
-.main{
-  height: auto;
+img { display : block;
+    margin : auto;
+}
+.imgplace{
+    margin: 20px;
 }
 
-.page{
-  text-align: center;
-  width: 100%;
-  height: 20%;
+.sulname{
+    color:red;
+    font-weight: bold;
 }
 
-.pagination {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
-  margin-top: 20px;
+p{
+    margin: 5px;
 }
 
-.pagination li {
-  display: inline;
-  text-align: center;
-  margin: auto;
-}
-
-.pagination a {
-  float: left;
-  display: block;
-  font-size: 14px;
-  text-decoration: none;
-  padding: 5px 12px;
-  color: #96a0ad;
-  line-height: 1.5;
-}
-
-.first{
-  margin-right: 15px;
-}
-
-.last{
-  margin-left: 15px;
-}
-
-.first:hover, .last:hover, .left:hover, .right:hover{
-  color: #2e9cdf;
-}
-
-.pagination a.active {
-  cursor: default;
-  color: #ffffff;
-}
-
-.pagination a:active {
-  outline: none;
-}
-
-.modal .num{
-  margin-left: 3px;
-  padding: 0;
-  width: 30px;
-  height:30px;
-  line-height: 30px;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-}
-
-.modal .num:hover {
-  background-color: #2e9cdf;
-  color: #ffffff;
-}
-
-.modal .num.active, .modal .num:active {
-  background-color: #2e9cdf;
-  cursor: pointer;
-}
-
-.arrow:left {
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid blue;
-}
-
-.sullist{
-  width: 80%;
-  height: 70%;
-  margin: auto;
-  text-align: center;
-  position: relative;top: 70px;
-}
-
-.sullist ul{
-  list-style-type: none;
-}
-.sullist li{
-  float: left;
-  margin-left: 107px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-
-.sulimg ul{
-  margin: auto;
-}
-
-.sulimg li{
-  margin: auto;
-  float: none;
-}
-
-.sulimg a{
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-}
-
-.sulimg p{
-  font-size: 25px;
-  color: orange;
+.infoplace{
+    width:70%;
+    height:300px;
+    border:5px;
+    margin:0 auto;
+    border-color: orange;
+    border-style:groove;
 }
