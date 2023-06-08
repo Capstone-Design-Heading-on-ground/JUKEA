@@ -85,10 +85,13 @@ public class MyController {
 	public String survayResult(HttpServletRequest request, Model model) {
 		int[] arr = new int[5];
 		String[] info = {"type", "smell", "flavor", "price", "alchol"};
+		
 		for(int i=0; i<arr.length; i++) {
 			arr[i] = Integer.parseInt(request.getParameter(info[i]));
 		}
-		model.addAttribute(bbs.drink_searchBySulbti(arr));
+		
+		
+		model.addAttribute("result",bbs.drink_searchBySulbti(arr));
 		return " ";
 	}
 	
