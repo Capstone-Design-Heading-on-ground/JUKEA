@@ -32,7 +32,7 @@ public class JukeaService implements IJukeaService {
 
 	@Override
 	public List<DrinkInfoDto> drink_searchBySulbti(int[] arr) {
-		return dao.searchBySulbti(arr);
+		return dao.searchBySulbti(arr[0], arr[1], arr[2], arr[3], arr[4]);
 	}
 
 	@Override
