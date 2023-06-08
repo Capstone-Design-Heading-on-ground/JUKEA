@@ -8,4 +8,8 @@
 	<insert id="insert_Member" parameterType="java.util.HashMap">
 		insert into member(id, pw, name, nickname, phone, address, mail, birthday)values(#{member1}, #{member2}, #{member3}, #{member4}, #{member5}, #{member6}, #{member7}, #{member8})
 	</insert>
+	 
+	 <select id="login_Member" parameterType="java.util.HashMap">
+        select * from member where id = #{id}  AND pw = #{pw}
+    </select>
 </mapper>

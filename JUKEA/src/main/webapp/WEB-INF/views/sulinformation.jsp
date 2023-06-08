@@ -126,6 +126,7 @@
           	</li>
           </c:forEach>
   	</ul>
+</div>
   <div class="page">
     <ul class="pagination modal">
       <li><a href="#" class="first">처음 페이지</a></li>
@@ -139,7 +140,6 @@
       <li><a href="#" class="last">끝 페이지</a></li>
     </ul>
 	</div>
-</div>
 </body>
 <script src="${contextPath}/resources/js/sulinformation5.js"></script>
 </html>

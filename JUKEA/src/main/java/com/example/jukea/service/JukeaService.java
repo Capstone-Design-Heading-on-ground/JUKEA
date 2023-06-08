@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import com.example.jukea.dao.IDrinkInfoDao;
 import com.example.jukea.dao.IMemberDao;
 import com.example.jukea.dto.DrinkInfoDto;
-import com.example.jukea.dto.MemberDto;
 
 @Service
 public class JukeaService implements IJukeaService {
@@ -44,11 +43,15 @@ public class JukeaService implements IJukeaService {
 	public int insert_Member(Map<String, String> map) {
 		return mdao.insert_Member(map);
 	}
+	
+	@Override
+	public int login_Member(Map<String, String> map) {
+		return mdao.login_Member(map);
+	}
 
 	@Override
 	public DrinkInfoDto drink_getDrinkInfo(int did) {
 		return dao.getDrinkInfo(did);
 	}
-
 
 }
