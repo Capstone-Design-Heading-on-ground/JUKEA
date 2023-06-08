@@ -10,7 +10,7 @@ import com.example.jukea.dto.DrinkInfoDto;
 public interface IDrinkInfoDao {
 	public List<DrinkInfoDto> getAllDrinks();
 	public List<DrinkInfoDto> searchByCategory(String selectedCategory);
-	public List<DrinkInfoDto> searchBySulbti(int[] arr);
+	public List<DrinkInfoDto> searchBySulbti(int type, int smell, int flavor, int price, int alchol);
 	public List<DrinkInfoDto> searchByName();
 	public DrinkInfoDto getDrinkInfo(int id);
 }

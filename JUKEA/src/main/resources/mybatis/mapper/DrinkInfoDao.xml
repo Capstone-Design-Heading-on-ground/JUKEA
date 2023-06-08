@@ -14,4 +14,54 @@
 	<select id="getDrinkInfo" resultType="com.example.jukea.dto.DrinkInfoDto">
 		SELECT * FROM T_Drink WHERE DID = #{param1}
 	</select>
+	<select id="searchBySulbti" resultType="com.example.jukea.dto.DrinkInfoDto">
+		SELECT * FROM T_Drink WHERE 1=1
+		<if test="type == 0">
+			AND DTYPE = '소주'
+		</if>
+		<if test="type == 1">
+			AND DTYPE = '맥주'
+		</if>
+		<if test="type == 2">
+			AND DTYPE = '와인'
+		</if>
+		<if test="type == 3">
+			AND DTYPE = '사케'
+		</if>
+		<if test="type == 4">
+			AND DTYPE = '브랜디'
+		</if>
+		<if test="type == 5">
+			AND DTYPE = '리큐르'
+		</if>
+		<if test="type == 6">
+			AND DTYPE = '위스키'
+		</if>
+		<if test="type == 9">
+			AND 1 = 1
+		</if>
+		
+		<if test="smell == 0">
+			AND (DSMELL = '자몽향' 
+			OR DSMELL = '그린애플맛' 
+			OR DSMELL = '복분자맛' 
+			OR DSMELL = '코코넛맛' 
+			OR DSMELL = '약간의배향' 
+			OR DSMELL = '바닐라향' 
+			OR DSMELL = '오렌지향'
+			)
+		</if>
+		<if test="smell == 1">
+			AND DSMELL = '보리향'
+		</if>
+		<if test="smell == 2">
+			AND DSMELL = '개성강한향'
+		</if>
+		<if test="smell == 3">
+			AND DSMELL = '알코올향'
+		</if>
+		<if test="smell == 9">
+			AND 1 = 1
+		</if>
+	</select>
 </mapper>
