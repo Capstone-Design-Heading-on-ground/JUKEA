@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="${contenxtPath}/resources/css/sulinformation.css">
-  <link rel="stylesheet" href="${contextPath}/resources/css/sulbti.css">
+  <link rel="stylesheet" href="${contextPath}/resources/css/sulbti3.css">
 </head>
 <body>
 	<div class="mainheader">
@@ -116,7 +116,7 @@
     <h2>질문을 통해 자신과 맞는 술을 찾는</h2>
     <p> 추천 사이트 입니다!<br>
       아래에 있는 시작하기 버튼을 눌러 시작해주세요.</p>
-    <button type="button" class="btn btn-light mt-3" onclick="js:begin()">시작하기</button>
+    <button type="button" class="custom-btn btn-8" onclick="js:begin()">시작하기</button>
   </section>
 
   <!--질의 응답 페이지 -->
@@ -140,7 +140,7 @@
   </section>
   </form>
   </div>
-  <script src="${contextPath}/resources/js/data.js"></script>
+  <script src="${contextPath}/resources/js/data3.js"></script>
   <script src="${contextPath}/resources/js/start.js"></script>
 </body>
 </html>
