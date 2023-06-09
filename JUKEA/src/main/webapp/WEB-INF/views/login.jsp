@@ -4,6 +4,13 @@
     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"  /> 
+<% 
+	String create = "";
+	create = (String)request.getAttribute("create");
+	if(create == null || "null".equals(create)){
+		create = "normal";
+	}
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,6 +18,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+   <%
+		if(create.equals("sign_in")){
+	%>
+		<script>alert("회원가입이 완료되었습니다.");</script>
+	<%
+		}else if(create.equals("login_fail")){
+  	%>
+  		<script>alert("아이디나 비밀번호가 틀립니다 다시 입력해주세요");</script>
+  	<%
+		}
+  	%>
   <link rel="stylesheet" href="${contextPath}/resources/css/loginone.css">
 </head>
 <body>
@@ -32,7 +50,7 @@
   </div>
   <div class="login-page">    
     <div class="form">      
-      <form action = login_member method = post class="login-form">
+      <form class="login-form" id = frmlogin>
         <input type="text" placeholder="아이디" id="mid" name="mid"/>
         <input type="password" placeholder="비밀번호" id="mpw" name="mpw"/>
         <input type="submit" onClick="test()" value="LOGIN">
@@ -40,6 +58,6 @@
       </form>
     </div>
   </div>
-    <script src="${contextPath}/resources/js/login.js"></script>
+    <script src="${contextPath}/resources/js/loginone.js"></script>
 </body>
 </html>

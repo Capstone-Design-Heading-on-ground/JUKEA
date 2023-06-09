@@ -34,7 +34,7 @@
   <br>
 <div class="login-page">
     <div class="form">
-      <form action = insert_member method = post class="login-form">
+      <form class="login-form" id = "signin">
         <label>아이디</label>
         <input type="text" id="pid" name = "mid" placeholder="아이디"/>
         <label>비밀번호</label>
@@ -66,10 +66,10 @@
           <input type="tel" id="hp2" name="hp2" maxlength="4">
           <input type="tel" id="hp3" name="hp3" maxlength="4">
         </div>
-        <input type="submit" onClick="test()" value="회원가입" />
+        <input type="button" onClick="test()" value="회원가입" />
       </form>
     </div>
   </div>
-  <script src="${contextPath}/resources/js/signin.js"></script>
+  <script src="${contextPath}/resources/js/signinone.js"></script>
 </body>
 </html>
