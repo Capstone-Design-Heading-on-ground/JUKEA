@@ -17,7 +17,7 @@
 <body>
 	<div class="mainheader">
         <div class="head-title">	
-          <h1>JUKEA</h1>
+          <a href = "/"><h1> JUKEA</h1></a>
           <h4>밤은 길고 술은 달다 ★</h4>
         </div>
     </div>

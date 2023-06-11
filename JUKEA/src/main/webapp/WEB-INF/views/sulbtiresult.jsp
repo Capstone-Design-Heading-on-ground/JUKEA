@@ -10,12 +10,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="${contextPath}/resources/css/sulbitiresult.css">
+  <link rel="stylesheet" href="${contextPath}/resources/css/sulbitiresult2.css">
 </head>
 <body>
     <div class="mainheader">
         <div class="head-title">	
-          <h1>JUKEA</h1>
+          <a href = "/"><h1> JUKEA</h1></a>
           <h4>밤은 길고 술은 달다 ★</h4>
         </div>
     </div>
