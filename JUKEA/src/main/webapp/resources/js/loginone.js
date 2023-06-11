@@ -1,5 +1,5 @@
 function test(){
-	var frmlogin = document.frmlogin;
+	var frmlogin = document.getElementById('frmlogin');
 	var id = document.getElementById('mid').value;
 	var password = document.getElementById('mpw').value;
 	
@@ -12,4 +12,10 @@ function test(){
         alert('비밀번호를 입력해주세요.');
             return false;
     }
+    else
+    {
+		frmlogin.method = 'post';
+		frmlogin.action = '/login_member';
+		frmlogin.submit(); 	
+	}
 }

@@ -41,9 +41,11 @@ public class MyController {
 		try 
 		{
 		bbs.login_Member(map);
+		request.setAttribute("create", "login_in");
 		}catch(Exception e)
 		{
 			page = "/login";
+			request.setAttribute("create", "login_fail");
 		}
 		return page;
 	}
@@ -66,7 +68,7 @@ public class MyController {
 		String address = request.getParameter("maddress");
 		String mail = request.getParameter("mmail");
 		String birthday = request.getParameter("mbirthday");
-		String page = "main";
+		String page = "login";
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("member1", id);
 		map.put("member2", pw);
@@ -76,13 +78,9 @@ public class MyController {
 		map.put("member6", address);
 		map.put("member7", mail);
 		map.put("member8", birthday);
-		try {
-		 bbs.insert_Member(map);
-		}catch(Exception e)
-		{
-		 	page = "/signin";
-		}
 		
+		bbs.insert_Member(map);
+		request.setAttribute("create", "sign_in");
 		return page;
 	}
 	

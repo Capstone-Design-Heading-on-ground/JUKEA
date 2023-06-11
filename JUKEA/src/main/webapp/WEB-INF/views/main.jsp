@@ -3,6 +3,20 @@
     isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"  />  
+<% 
+	String create = "";
+	create = (String)request.getAttribute("create");
+	if(create == null || "null".equals(create)){
+		create = "normal";
+	}
+%>
+	<%
+		if(create.equals("login_in")){
+	%>
+		<script>alert("로그인 성공!");</script>
+  	<%
+		}
+  	%>
 <!DOCTYPE html>
 <html>
 <head>	

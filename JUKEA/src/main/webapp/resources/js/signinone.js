@@ -1,4 +1,5 @@
 function test() {
+	var signin = document.getElementById('signin');
     var id = document.getElementById('pid').value;
     var name = document.getElementById('pname').value;
     var password = document.getElementById('pwd').value;
@@ -58,6 +59,11 @@ function test() {
        if( password != checkpassword ) {
           alert("비밀번호불일치");
           return false;
-        }
+        }else
+        {
+			signin.method = 'post';
+			signin.action = '/insert_member';
+			signin.submit(); 
+		}
        
   }
