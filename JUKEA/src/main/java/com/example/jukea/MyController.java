@@ -111,14 +111,72 @@ public class MyController {
 	public String survayResult(HttpServletRequest request, Model model) {
 		int[] arr = new int[5];
 		String[] info = {"type", "smell", "flavor", "price", "alchol"};
+		String resultContent = "";
 		
 		for(int i=0; i<arr.length; i++) {
 			arr[i] = Integer.parseInt(request.getParameter(info[i]));
 		}
 		
+		switch(arr[1]) {
+		case 0:	resultContent += "과일향이 나고, ";
+			break;
+		case 1: resultContent += "곡물향이 나고, ";
+			break;
+		case 2: resultContent += "개성있는 특유의 향이 나고, ";
+			break;
+		case 3: resultContent += "알코올 향이 나고, ";
+		}
 		
-		model.addAttribute("result",bbs.drink_searchBySulbti(arr));
-		return " ";
+		switch(arr[2]) {
+		case 0:	resultContent += "맛있는 술에, ";
+			break;
+		case 1: resultContent += "적당한 술맛에, ";
+			break;
+		case 2: resultContent += "그냥 술맛에, ";
+			break;
+		}
+		
+		switch(arr[3]) {
+		case 0:	resultContent += "값싸며  ";
+			break;
+		case 1: resultContent += "적당한 가격이며 ";
+			break;
+		case 2: resultContent += "조금 비싸며 ";
+			break;
+		case 3: resultContent += "많이 비싸며 ";
+			break;
+		}
+		
+		switch(arr[0]) {
+		case 0:	resultContent += "소주를 선택한 ";
+			break;
+		case 1: resultContent += "맥주를 선택한 ";
+			break;
+		case 2: resultContent += "와인을 선택한 ";
+			break;
+		case 3: resultContent += "사케를 선택한 ";
+			break;
+		case 4: resultContent += "브랜디를 선택한 ";
+			break;
+		case 5: resultContent += "리큐르를 선택한 ";
+			break;
+		case 6: resultContent += "위스키를 선택한 ";
+			break;
+		}
+		
+		switch(arr[4]) {
+		case 0: resultContent += "술찌인 당신";
+			break;
+		case 1: resultContent += "술을 좀 마시는 당신";
+			break;
+		case 2: resultContent += "술고래인 당신";
+			break;
+		}
+			
+		model.addAttribute("drinks",bbs.drink_searchBySulbti(arr));
+		System.out.println(bbs.drink_searchBySulbti(arr));
+		model.addAttribute("resultContent", resultContent);
+		return "sulbtiresult";
 	}
 	
 	@RequestMapping("/info")
