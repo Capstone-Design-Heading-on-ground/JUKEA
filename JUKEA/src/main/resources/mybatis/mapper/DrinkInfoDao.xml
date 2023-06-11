@@ -15,33 +15,33 @@
 		SELECT * FROM T_Drink WHERE DID = #{param1}
 	</select>
 	<select id="searchBySulbti" resultType="com.example.jukea.dto.DrinkInfoDto">
-		SELECT * FROM T_Drink WHERE 1=1
-		<if test="type == 0">
-			AND DTYPE = '소주'
+		SELECT * FROM T_Drink WHERE 1=1 
+		<if test="param1 == 0">
+			AND DTYPE = '소주' 
 		</if>
-		<if test="type == 1">
-			AND DTYPE = '맥주'
+		<if test="param1 == 1">
+			AND DTYPE = '맥주' 
 		</if>
-		<if test="type == 2">
-			AND DTYPE = '와인'
+		<if test="param1 == 2">
+			AND DTYPE = '와인' 
 		</if>
-		<if test="type == 3">
-			AND DTYPE = '사케'
+		<if test="param1 == 3">
+			AND DTYPE = '사케' 
 		</if>
-		<if test="type == 4">
-			AND DTYPE = '브랜디'
+		<if test="param1 == 4">
+			AND DTYPE = '브랜디' 
 		</if>
-		<if test="type == 5">
-			AND DTYPE = '리큐르'
+		<if test="param1 == 5">
+			AND DTYPE = '리큐르' 
 		</if>
-		<if test="type == 6">
-			AND DTYPE = '위스키'
+		<if test="param1 == 6">
+			AND DTYPE = '위스키' 
 		</if>
-		<if test="type == 9">
-			AND 1 = 1
+		<if test="param1 == 9">
+			AND 1 = 1 
 		</if>
 		
-		<if test="smell == 0">
+		<if test="param2 == 0">
 			AND (DSMELL = '자몽향' 
 			OR DSMELL = '그린애플맛' 
 			OR DSMELL = '복분자맛' 
@@ -49,19 +49,63 @@
 			OR DSMELL = '약간의배향' 
 			OR DSMELL = '바닐라향' 
 			OR DSMELL = '오렌지향'
-			)
+			OR DSMELL = '약간의배향'
+			OR DSMELL =	'달콤한향'
+			OR DSMELL = '키위향'
+			OR DSMELL = '달콤한사과향'
+			) 
 		</if>
-		<if test="smell == 1">
-			AND DSMELL = '보리향'
+		<if test="param2 == 1">
+			AND DSMELL = '보리향' 
 		</if>
-		<if test="smell == 2">
-			AND DSMELL = '개성강한향'
+		<if test="param2 == 2">
+			AND DSMELL = '개성강한향' 
 		</if>
-		<if test="smell == 3">
-			AND DSMELL = '알코올향'
+		<if test="param2 == 3">
+			AND DSMELL = '알코올향' 
 		</if>
-		<if test="smell == 9">
-			AND 1 = 1
+		<if test="param2 == 9">
+			AND 1 = 1 
+		</if>
+		
+		<if test="param3 == 0">
+			AND DFLAVOR BETWEEN 1 AND 2 
+		</if>
+		<if test="param3 == 1">
+			AND DFLAVOR BETWEEN 2 AND 4 
+		</if>
+		<if test="param3 == 2">
+			AND DFLAVOR BETWEEN 4 AND 6 
+		</if>
+		<if test="param3 == 9">
+			AND 1 = 1 
+		</if>
+		<if test="param4 == 0">
+			AND DPRICE BETWEEN 0 AND 5000 
+		</if>
+		<if test="param4 == 1">
+			AND DPRICE BETWEEN 5000 AND 10000 
+		</if>
+		<if test="param4 == 2">
+			AND DPRICE BETWEEN 10000 AND 50000 
+		</if>
+		<if test="param4 == 3">
+			AND DPRICE BETWEEN 50000 AND 9999999 
+		</if>
+		<if test="param4 == 9">
+			AND 1 = 1 
+		</if>
+		<if test="param5 == 0">
+			AND DALCHOL BETWEEN 0 AND 5 
+		</if>
+		<if test="param5 == 1">
+			AND DALCHOL BETWEEN 5 AND 22 
+		</if>
+		<if test="param5 == 2">
+			AND DALCHOL BETWEEN 22 AND 50 
+		</if>
+		<if test="param5 == 3">
+			AND 1 = 1 
 		</if>
 	</select>
 </mapper>
